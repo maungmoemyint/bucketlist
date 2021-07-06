@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Style Guide | My Bucket List</title>
+    <meta name="description" content="Style Guide for the EPFL Extension School's Full Stack Developer course">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styleguide.css">
+  </head>
+  <body>
+    <header class="sg-header">
+      <div class="site-header">
+        <div class="content-wrapper">
+          <div class="logo">
+            <a href="/"><span><i>My</i> Bucket List</span></a>
+          </div>
+          <form class="global-search" method="get" action="" role="search">
+            <div class="input-inline">
+              <label class="input-group__label sr-only" for="global-search-input">Looking for inspiration?</label>
+              <div class="input-row">
+                <input id="global-search-input" class="input-row__field" type="text" name="global-search" placeholder="e.g. Swimming with dolphins">
+                <button class="btn btn--inline btn--primary" type="submit">Search</button>
+              </div>
+            </div>
+          </form>
+          <nav class="site-header__nav">
+            <ul class="main-navigation">
+              <li><a href="#nolink">Inspiration</a></li>
+              <li><a href="#nolink">Sign Up</a></li>
+              <li><a href="#nolink">Log In</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="content-wrapper">
+      <div>
+        <h1>Style Guide</h1>
+        <p>
+          Our Style Guide is based upon the principles of Atomic design, a methodology composed of five distinct stages working together to create interface design systems in a more deliberate and hierarchical manner.
+        </p>
+        <nav>
+          <ul class="sub-navigation">
+            <li><a href="styleguide.html" class="current">Atoms</a></li>
+            <li><a href="molecules.html">Molecules</a></li>
+            <li><a href="organisms.html">Organisms</a></li>
+            <li><a href="templates.html">Templates</a></li>
+            <li><a href="#pages">Pages</a></li>
+          </ul>
+        </nav>
+        <h2>Atoms</h2>
+        <p>
+          Atoms are the basic building blocks of matter. Applied to web interfaces, atoms are our HTML tags, such as a form label, an input or a button.
+        </p>
+        <p>
+          Atoms can also include more abstract elements like color palettes, fonts and even more invisible aspects of an interface like animations.
+        </p>
+        <p>
+          Like atoms in nature they’re fairly abstract and often not terribly useful on their own. However, they’re good as a reference in the context of a pattern library as you can see all your global styles laid out at a glance.
+        </p>
+        <nav>
+          <ol class="ordered-navigation">
+            <li><a href="#palette">Palette</a></li>
+            <li><a href="#typography">Typography</a></li>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#forms">Form Elements</a></li>
+            <li><a href="#icons">Icons</a></li>
+          </ol>
+        </nav>
+      </div>
+      <section class="sg-section" id="palette">
+        <h3 class="beta">01. Palette</h3>
+        <ul class="sg-palette">
+          <li>
+            <div data-bgColor="blue"></div>
+            <p>#2c9cf2</p>
+          </li>
+          <li>
+            <div data-bgColor="black"></div>
+            <p>#192127</p>
+          </li>
+          <li>
+            <div data-bgColor="darkest"></div>
+            <p>#72797e</p>
+          </li>
+          <li>
+            <div data-bgColor="dark"></div>
+            <p>#afbac4</p>
+          </li>
+          <li>
+            <div data-bgColor="gray"></div>
+            <p>#bbc1c6</p>
+          </li>
+          <li>
+            <div data-bgColor="light"></div>
+            <p>#e3e5e9</p>
+          </li>
+          <li>
+            <div data-bgColor="lightest"></div>
+            <p>#f7f9fc</p>
+          </li>
+          <li>
+            <div data-bgColor="red"></div>
+            <p>#e25d43</p>
+          </li>
+        </ul>
+      </section>
+      <section class="sg-section" id="typography">
+        <h3 class="beta">02. Typography</h3>
+        <div class="sg-inlineblock">
+          <h4>Glyph</h4>
+          <p class="giga">Aa</p>
+        </div>
+        <div class="sg-inlineblock sg-weights">
+          <h4>Weights</h4>
+          <ul class="bare-list">
+            <li>Regular</li>
+            <li><em>Regular Italic</em></li>
+            <li><strong>Bold</strong></li>
+            <li><strong><em>Bold Italic</em></strong></li>
+          </ul>
+        </div>
+        <table class="table--lines sg-typotable">
+          <thead>
+            <tr>
+              <th>Style</th>
+              <th>Desktop</th>
+              <th>Tablet</th>
+              <th>Mobile</th>
+              <th>Line-height</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="alpha">H1 / .alpha</td>
+              <td>48px</td>
+              <td>40px</td>
+              <td>36px</td>
+              <td>1.2</td>
+            </tr>
+            <tr>
+              <td class="beta">H2 / .beta</td>
+              <td>36px</td>
+              <td>32px</td>
+              <td>28px</td>
+              <td>1.2</td>
+            </tr>
+            <tr>
+              <td class="gamma">H3 / .gamma</td>
+              <td>28px</td>
+              <td>28px</td>
+              <td>24px</td>
+              <td>1.2</td>
+            </tr>
+            <tr>
+              <td class="delta">H4 / .delta</td>
+              <td>13px</td>
+              <td>13px</td>
+              <td>13px</td>
+              <td>1.5</td>
+            </tr>
+            <tr>
+              <td class="epsilon">H5 / .epsilon</td>
+              <td>14px</td>
+              <td>14px</td>
+              <td>14px</td>
+              <td>1.4</td>
+            </tr>
+            <tr>
+              <td class="zeta">H6 / .zeta</td>
+              <td>12px</td>
+              <td>12px</td>
+              <td>12px</td>
+              <td>1.4</td>
+            </tr>
+            <tr>
+              <td class="sg-header-button">Action/Button</td>
+              <td>13px</td>
+              <td>13px</td>
+              <td>13px</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Paragraph text</td>
+              <td>15px</td>
+              <td>15px</td>
+              <td>15px</td>
+              <td>1.6</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="sg-section" id="buttons">
+        <h3 class="beta">03. Buttons</h3>
+        <h4>Default button</h4>
+        <div>
+          <button class="btn" type="button">Button</button>
+          <a class="btn" href="#nolink">Link Button</a>
+        </div>
+        <h4>Primary button</h4>
+        <div>
+          <button class="btn btn--primary" type="button">Primary button</button>
+        </div>
+        <h4>Negative button</h4>
+        <div>
+          <button class="btn btn--warning" type="button">Warning button</button>
+        </div>
+      </section>
+      <section class="sg-section" id="forms">
+        <h3 class="beta">04. Form Elements</h3>
+        <div>
+          <h4 class="gamma">Input field</h4>
+          <div class="input-group input-group--horizontal">
+            <label class="input-group__label" for="sg-input">Input label</label>
+            <input id="sg-input" class="input-group__field" type="text" name="sg-input" placeholder="Placeholder text">
+          </div>
+        </div>
+        <div>
+          <h4 class="gamma">Text area</h4>
+          <div class="input-group input-group--horizontal">
+            <label class="input-group__label" for="sg-textarea">Text area label</label>
+            <textarea id="sg-textarea" class="input-group__field"></textarea>
+          </div>
+        </div>
+        <div>
+          <h4 class="gamma">Validation message on 1 column form</h4>
+          <div class="alert">
+            Please fill out a valid email address.
+            <p>Please enter name.</p>
+            <ul>
+              <li>Phone number missing.</li>
+              <li>Postcode missing.</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h4 class="gamma">Validation message on 2 column form</h4>
+          <div class="alert alert--wide">
+            Please fill out a valid email address.
+            <p>Please enter name.</p>
+            <ul>
+              <li>Phone number missing.</li>
+              <li>Postcode missing.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="sg-section" id="icons">
+        <h3 class="beta">05. Icons</h3>
+        <div>
+          <ul>
+            <li>
+              <svg class="icon-heart" role="presentation">
+                <use xlink:href="images/icons-defs.svg#heart"></use>
+              </svg>
+            </li>
+            <li>
+              <svg class="icon-heart icon-heart--liked" role="presentation">
+                <use xlink:href="images/icons-defs.svg#heart"></use>
+              </svg>
+            </li>
+            <li>
+              <svg class="icon-pluss" role="presentation">
+                <use xlink:href="images/icons-defs.svg#pluss"></use>
+              </svg>
+            </li>
+            <li>
+              <svg class="icon-edit" role="presentation">
+                <use xlink:href="images/icons-defs.svg#edit"></use>
+              </svg>
+            </li>
+            <li>
+              <svg class="icon-delete" role="presentation">
+                <use xlink:href="images/icons-defs.svg#delete"></use>
+              </svg>
+            </li>
+            <li>
+              <svg class="icon-edit" role="presentation">
+                <use xlink:href="images/icons-defs.svg#edit"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="content-wrapper">
+        <div class="logo logo--inverted footer__logo">
+          <a href="/"><span><i>My</i> Bucket List</span></a>
+        </div>
+        <nav class="footer__navigation">
+          <ul>
+            <li><a href="#nolink">About</a></li>
+            <li><a href="#nolink">Style Guide</a></li>
+            <li><a href="#nolink">Terms of Use</a></li>
+          </ul>
+        </nav>
+        <p class="copyright">&copy; EPFL 2017</p>
+      </div>
+    </footer>
+  </body>
+</html>
