@@ -1,2 +1,368 @@
-<h1>Styles#organisms</h1>
-<p>Find me in app/views/styles/organisms.html.erb</p>
+<main class="content-wrapper">
+  <div>
+    <nav>
+      <ul class="sub-navigation">
+        <li><a href="styleguide.html">Atoms</a></li>
+        <li><a href="molecules.html">Molecules</a></li>
+        <li><a href="organisms.html" class="current">Organisms</a></li>
+        <li><a href="templates.html">Templates</a></li>
+        <li><a href="#pages">Pages</a></li>
+      </ul>
+    </nav>
+    <h1>Organisms</h1>
+    <p>
+      Molecules give us some building blocks to work with, and we can now combine them together to form organisms. Organisms are groups of molecules joined together to form a relatively complex, distinct section of an interface.
+    </p>
+    <p>
+      Organisms can consist of similar and/or different molecule types. For example, a masthead organism might consist of diverse components like a logo, primary navigation, search form, and list of social media channels. But a “product grid” organism might consist of the same molecule (possibly containing a product image, product title and price) repeated over and over again.
+    </p>
+    <p>
+      Building up from molecules to organisms encourages creating standalone, portable, reusable components.
+    </p>
+     <nav>
+      <ol class="ordered-navigation">
+        <li><a href="#filters">Filters</a></li>
+        <li><a href="#ideas">Ideas</a></li>
+        <li><a href="#create-goal">Create goal</a></li>
+        <li><a href="#edit-profile">Edit profile</a></li>
+        <li><a href="#login">Log in</a></li>
+        <li><a href="#forgot">Forgotten password</a></li>
+        <li><a href="#signup">Sign Up</a></li>
+        <li><a href="#change-password">Change password</a></li>
+      </ol>
+    </nav>
+  </div>
+  <section class="sg-section" id="filters">
+    <h2>01. Filters</h2>
+    <div>
+      <button class="toggle" type="button" data-toggle="filter">Filter by tags</button>
+      <div class="filter js-hidden">
+        <ul class="tags-list">
+          <li><a href="#tag1" data-filter="tag-1">Tag 1</a></li>
+          <li><a href="#tag2" data-filter="tag-2">Tag 2</a></li>
+          <li>
+            <a href="#tag3" class="selected" data-filter="tag-3">
+              Tag 3
+              <i class="remove-tag" data-remove-tag="tag-3">&times;</i>
+            </a>
+          </li>
+          <li><a href="#tag4" data-filter="tag-4">Tag 4</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="sg-section" id="ideas">
+    <h2>02. Ideas</h2>
+    <div>
+      <ul class="bare-list float-grid css-grid">
+        <li>
+          <div class="card">
+            <div class="card__thumb">
+              <a href="ideas/northern-lights.html">
+                <img src="http://fpoimg.com/255x170"
+                     alt="Northern lights over mountain covered in snow">
+              </a>
+              <div class="card__intro">
+                <h4 class="card__title">See the Northern lights</h4>
+                <span>1,598 have done this</span>
+              </div>
+            </div>
+            <div class="card__footer">
+              <button class="card__btn card__like delta" data-like="see-the-northern-lights">
+                <svg class="icon-heart" role="presentation">
+                  <use xlink:href="images/icons-defs.svg#heart"></use>
+                </svg>
+                Like
+              </button>
+              <button class="card__btn card__add delta" data-addGoal="see-the-northern-lights">
+                <svg class="icon-pluss" role="presentation">
+                  <use xlink:href="images/icons-defs.svg#pluss"></use>
+                </svg>
+                Add Goal
+              </button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="card__thumb">
+              <a href="ideas/one-example-idea.html">
+                <img src="http://fpoimg.com/255x170"
+                     alt="Placeholder image for templating">
+              </a>
+              <div class="card__intro">
+                <h4 class="card__title">Something anything onething much longer text something</h4>
+                <span>109,598,324 are doing this</span>
+              </div>
+            </div>
+          </div>
+          <div class="card__footer">
+            <button class="card__btn card__like delta" data-like="something-anything-onething-much-longer-text-something">
+              <svg class="icon-heart" role="presentation">
+                <use xlink:href="images/icons-defs.svg#heart"></use>
+              </svg>
+              Like
+            </button>
+            <button class="card__btn card__add delta" data-addGoal="something-anything-onething-much-longer-text-something">
+              <svg class="icon-pluss" role="presentation">
+                <use xlink:href="images/icons-defs.svg#pluss"></use>
+              </svg>
+              Add Goal
+            </button>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="card__thumb">
+              <a href="ideas/one-example-idea.html">
+                <img src="http://fpoimg.com/255x170"
+                     alt="Placeholder image for templating">
+              </a>
+              <div class="card__intro">
+                <h4 class="card__title">Short</h4>
+                <span>1 is doing this</span>
+              </div>
+            </div>
+            <div class="card__footer">
+              <button class="card__btn card__like delta" data-like="see-the-northern-lights">
+                <svg class="icon-heart" role="presentation">
+                  <use xlink:href="assets/icons/icons-defs.svg#heart"></use>
+                </svg>
+                Like
+              </button>
+              <button class="card__btn card__add delta" data-addGoal="see-the-northern-lights">
+                <svg class="icon-pluss" role="presentation">
+                  <use xlink:href="assets/icons/icons-defs.svg#pluss"></use>
+                </svg>
+                Add Goal
+              </button>
+            </div>
+          </div>
+          <div class="card__footer">
+            <button class="card__btn card__like delta" data-like="see-the-northern-lights">
+              <svg class="icon-heart" role="presentation">
+                <use xlink:href="images/icons-defs.svg#heart"></use>
+              </svg>
+              Like
+            </button>
+            <button class="card__btn card__add delta" data-addGoal="see-the-northern-lights">
+              <svg class="icon-pluss" role="presentation">
+                <use xlink:href="images/icons-defs.svg#pluss"></use>
+              </svg>
+              Add Goal
+            </button>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="card__thumb">
+              <a href="ideas/one-example-idea.html">
+                <img src="http://fpoimg.com/255x170"
+                     alt="Placeholder image for templating">
+              </a>
+              <div class="card__intro">
+                <h4 class="card__title">Short</h4>
+                <span>1 has done this</span>
+              </div>
+            </div>
+            <div class="card__footer">
+              <button class="card__btn card__like delta" data-like="see-the-northern-lights">
+                <svg class="icon-heart" role="presentation">
+                  <use xlink:href="images/icons-defs.svg#heart"></use>
+                </svg>
+                Like
+              </button>
+              <button class="card__btn card__add delta" data-addGoal="see-the-northern-lights">
+                <svg class="icon-pluss" role="presentation">
+                  <use xlink:href="images/icons-defs.svg#pluss"></use>
+                </svg>
+                Add Goal
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="sg-section" id="create-goal">
+    <h2>03. Create Goal</h2>
+    <div>
+      <form class="form--inpage" action="create-goal.html" method="post">
+        <div class="alert alert--wide">
+          Please fill out a title.<br />
+          Please add an image.<br />
+        </div>
+        <div class="input-group input-group--horizontal">
+          <label class="input-group__label" for="goal-title">Title</label>
+          <input id="goal-title" class="input-group__field" type="text" name="goal-title" placeholder="E.g. Ride a camel">
+        </div>
+        <div class="input-group input-group--horizontal">
+          <label class="input-group__label" for="goal-image">Add an image</label>
+          <input id="goal-image" class="input-group__field" type="file" name="goal-image" >
+        </div>
+        <div class="input-group input-group--horizontal">
+          <label class="input-group__label" for="goal-tags">Add tags</label>
+          <input id="goal-tags" class="input-group__field" type="text" name="goal-tags" placeholder="Separate multiple tags with commas">
+        </div>
+        <div class="input-group input-group--horizontal">
+          <label class="input-group__label" for="goal-description">Description</label>
+          <textarea id="goal-description" class="input-group__field"></textarea>
+        </div>
+        <div class="prompt">
+          <a class="prompt__cancel" href="#cancel">Cancel</a>
+          <button class="btn btn--primary prompt__confirm" type="submit">Create Goal</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <section class="sg-section" id="edit-profile">
+    <h2>04. Edit profile</h2>
+    <div>
+      <form class="form--inpage" action="profile.html" method="post">
+        <div class="alert alert--wide">
+          Please fill out a title.<br />
+          Please add an image.<br />
+        </div>
+        <div class="input-group input-group--horizontal">
+          <label class="input-group__label" for="full-name">Full name</label>
+          <input id="full-name" class="input-group__field" type="text" name="full-name" placeholder="e.g. Diana Prince">
+        </div>
+        <div class="input-group input-group--horizontal">
+          <label class="input-group__label" for="profile-image">Profile picture</label>
+          <input id="profile-image" class="input-group__field" type="file" name="profile-image" >
+        </div>
+        <div class="input-group input-group--horizontal">
+          <label class="input-group__label" for="profile-description">Description</label>
+          <textarea id="profile-description" class="input-group__field"></textarea>
+        </div>
+        <div class="prompt">
+          <a class="prompt__cancel" href="#cancel">Cancel</a>
+          <button class="btn btn--primary prompt__confirm" type="submit">Update profile</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <section class="sg-section" id="login">
+    <h2>05. Log in</h2>
+    <section class="envelope">
+      <header class="text--center">
+        <h1 class="gamma">Log in</h1>
+        <p>Not a member? <a href="sign-up.html">Sign Up</a></p>
+      </header>
+      <main>
+        <form action="sign-in.html" method="post">
+          <div class="alert">
+            Incorrect email/password combination.
+          </div>
+          <div class="input-group">
+            <label class="input-group__label" for="email">Email</label>
+            <input id="email" class="input-group__field" type="email" name="email" placeholder="e.g. diana.prince@wonder.com">
+          </div>
+          <div class="input-group">
+            <label class="input-group__label" for="password">Password</label>
+            <input id="password" class="input-group__field" type="password" name="password">
+          </div>
+          <p><a href="forgot-password.html">Forgot password?</a></p>
+          <div class="prompt">
+            <button class="btn btn--primary prompt__confirm" type="submit">Log in</button>
+          </div>
+        </form>
+      </main>
+    </section>
+  </section>
+  <section class="sg-section" id="forgot">
+    <h2>06. Forgot password</h2>
+    <section class="envelope">
+      <header class="text--center">
+        <h1 class="gamma">Forgot Password?</h1>
+        <p>
+          Don't worry, it happens to the best of us. Enter your email address and we'll send you a link to reset it.
+        </p>
+      </header>
+      <main>
+        <form action="reset-password.html" method="post">
+          <div class="alert">
+            Invalid email.
+          </div>
+          <div class="input-group">
+            <label class="input-group__label" for="email">Email address</label>
+            <input id="email" class="input-group__field" type="email" name="email" placeholder="e.g. diana.prince@wonder.com">
+          </div>
+          <div class="prompt">
+            <button class="btn btn--primary prompt__confirm" type="submit">Reset password</button>
+          </div>
+        </form>
+      </main>
+    </section>
+  </section>
+  <section class="sg-section" id="signup">
+    <h2>07. Sign up</h2>
+    <section class="envelope">
+      <header class="text--center">
+        <h1 class="gamma">Sign up</h1>
+        <p>Already a member? <a href="sign-in.html">Log In</a></p>
+      </header>
+      <main>
+        <form action="sign-up.html" method="post">
+          <div class="alert">
+            List validation messages here.
+          </div>
+          <div class="input-group">
+            <label class="input-group__label" for="full-name">Full name</label>
+            <input id="full-name" class="input-group__field" type="text" name="full-name" placeholder="e.g. Diana Prince">
+          </div>
+          <div class="input-group">
+            <label class="input-group__label" for="email">Email address</label>
+            <input id="email" class="input-group__field" type="email" name="email" placeholder="e.g. diana.prince@wonder.com">
+          </div>
+          <div class="input-group">
+            <label class="input-group__label" for="password">Choose a password</label>
+            <input id="password" class="input-group__field" type="password" name="password">
+          </div>
+          <div class="input-group">
+            <label class="input-group__label" for="repeat-password">Retype password</label>
+            <input id="repeat-password" class="input-group__field" type="password" name="repeat-password">
+          </div>
+          <div>
+            <input id="tos" type="checkbox" />
+            <label for="tos">By signing up I agree to My Bucket List's <a href="tos.html">Terms of Service</a>.</label>
+          </div>
+          <div class="prompt">
+            <button class="btn btn--primary prompt__confirm" type="submit">Sign up</button>
+          </div>
+        </form>
+      </main>
+    </section>
+  </section>
+  <section class="sg-section" id="change-password">
+    <h2>08. Change password</h2>
+    <div>
+      <form class="form--inpage" action="account-settings.html" method="post">
+        <div class="alert alert--wide">
+          Please fill out a valid email.<br />
+          Other validation messages.
+        </div>
+        <div class="input-group input-group--horizontal">
+          <label class="input-group__label" for="full-name">Email</label>
+          <input id="email" class="input-group__field" type="email" name="email" placeholder="e.g. diana.prince@wonder.com">
+        </div>
+        <div class="input-group input-group--horizontal">
+          <label class="input-group__label" for="current-password">Current password</label>
+          <input id="current-password" class="input-group__field" type="password" name="current-password">
+        </div>
+        <div class="input-group input-group--horizontal">
+          <label class="input-group__label" for="new-password">New password</label>
+          <input id="new-password" class="input-group__field" type="password" name="new-password">
+        </div>
+        <div class="input-group input-group--horizontal">
+            <label class="input-group__label" for="repeat-password">Confirm new password</label>
+            <input id="repeat-password" class="input-group__field" type="password" name="repeat-password">
+          </div>
+        <div class="prompt">
+          <a class="prompt__cancel" href="#cancel">Cancel</a>
+          <button class="btn btn--primary prompt__confirm" type="submit">Update account settings</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>

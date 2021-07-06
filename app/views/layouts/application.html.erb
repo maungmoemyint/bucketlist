@@ -5,10 +5,44 @@
     <%= csrf_meta_tags %>
 
     <link rel="stylesheet" href="/css/main.css"></link>
+    <link rel="stylesheet" href="css/styleguide.css"></link>
   </head>
 
   <body>
+
+    <!--
+      Start of header markup for layouts/application.html.erb
+      This goes before <%= yield %>
+    -->
     <header class="sg-header">
+      <div class="site-header">
+        <div class="content-wrapper">
+          <div class="logo">
+            <a href="/"><span><i>My</i> Bucket List</span></a>
+          </div>
+          <form class="global-search" method="get" action="" role="search">
+            <div class="input-inline">
+              <label class="input-group__label sr-only" for="global-search-input">Looking for inspiration?</label>
+              <div class="input-row">
+                <input id="global-search-input" class="input-row__field" type="text" name="search" placeholder="e.g. Swimming with dolphins">
+                <button class="btn btn--inline btn--primary" type="submit">Search</button>
+              </div>
+            </div>
+          </form>
+          <nav class="site-header__nav">
+            <ul class="main-navigation">
+              <li><a href="#nolink">Inspiration</a></li>
+              <li><a href="#nolink">Sign Up</a></li>
+              <li><a href="#nolink">Log In</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!--
+      End of header markup
+    -->
+    <!-- <header class="sg-header">
       <div class="site-header">
         <div class="content-wrapper">
           <div class="logo">
@@ -32,7 +66,7 @@
           </nav>
         </div>
       </div>
-    </header>
+    </header> -->
 
     <%= yield %>
 
@@ -51,6 +85,8 @@
         <p class="copyright">&copy; EPFL 2017</p>
       </div>
     </footer>
+
+
 
   </body>
 </html>
