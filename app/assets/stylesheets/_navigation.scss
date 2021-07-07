@@ -1,0 +1,21 @@
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
+/* Main navigation
+   ========================================================================== */
+/*ul*/.main-navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-navigation li {
+  display: inline-block;
+}
+
+.main-navigation a {
+  color: #192127;
+  display: inline-block;
+  padding: 1.3rem 0.75rem;
+}
