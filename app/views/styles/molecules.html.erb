@@ -32,56 +32,25 @@
   </div>
   <section class="sg-section" id="card">
     <h2>01. Card</h2>
-    <div class="card">
-      <div class="card__thumb">
-        <a href="ideas/one-example-idea.html">
-          <img src="http://fpoimg.com/255x170"
-               alt="Northern lights over mountain covered in snow">
-        </a>
-        <div class="card__intro">
-          <h4 class="card__title">See the Northern lights</h4>
-          <span>1,598 have done this</span>
-        </div>
-      </div>
-      <div class="card__footer">
-        <button class="card__btn card__like delta" data-like="see-the-northern-lights">
-          <svg class="icon-heart icon-heart--liked" role="presentation">
-            <use xlink:href="images/icons-defs.svg#heart"></use>
-          </svg>
-          Like
-        </button>
-        <button class="card__btn card__add delta" data-addGoal="see-the-northern-lights">
-          <svg class="icon-pluss" role="presentation">
-            <use xlink:href="images/icons-defs.svg#pluss"></use>
-          </svg>
-          Add Goal
-        </button>
-      </div>
-    </div>
+    <%= render(partial: 'idea_card') %>
   </section>
   <section class="sg-section" id="logo">
     <h2>02. Logo</h2>
     <h3>Default logo</h3>
-    <div class="logo">
-      <a href="/"><span><i>My</i> Bucket List</span></a>
-    </div>
+
+    <%= render(partial: 'logo') %>
+
     <h3>Negative logo</h3>
     <p>Used on dark background, like in the site footer.</p>
-    <div class="sg-dark-bg">
-      <div class="logo logo--inverted footer__logo">
-        <a href="/"><span><i>My</i> Bucket List</span></a>
-      </div>
-    </div>
+
+    <%= render(partial: 'negative_logo') %>
+
   </section>
   <section class="sg-section" id="search">
     <h2>03. Search</h2>
-    <div class="input-inline">
-      <label class="input-group__label" for="global-search-input">Looking for inspiration?</label>
-      <div class="input-row">
-        <input id="global-search-input" class="input-row__field" type="text" name="global-search" placeholder="e.g. Swimming with dolphins">
-        <button class="btn btn--inline" type="submit">Search</button>
-      </div>
-    </div>
+    
+    <%= render(partial: 'search_control') %>
+
   </section>
   <section class="sg-section" id="navigation">
     <h2>04. Navigation</h2>
