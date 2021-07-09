@@ -56,130 +56,16 @@
     <div>
       <ul class="bare-list float-grid css-grid">
         <li>
-          <div class="card">
-            <div class="card__thumb">
-              <a href="ideas/northern-lights.html">
-                <img src="http://fpoimg.com/255x170"
-                     alt="Northern lights over mountain covered in snow">
-              </a>
-              <div class="card__intro">
-                <h4 class="card__title">See the Northern lights</h4>
-                <span>1,598 have done this</span>
-              </div>
-            </div>
-            <div class="card__footer">
-              <button class="card__btn card__like delta" data-like="see-the-northern-lights">
-                <svg class="icon-heart" role="presentation">
-                  <use xlink:href="images/icons-defs.svg#heart"></use>
-                </svg>
-                Like
-              </button>
-              <button class="card__btn card__add delta" data-addGoal="see-the-northern-lights">
-                <svg class="icon-pluss" role="presentation">
-                  <use xlink:href="images/icons-defs.svg#pluss"></use>
-                </svg>
-                Add Goal
-              </button>
-            </div>
-          </div>
+          <%= render partial: 'idea_card', locals: { card_title: 'See the Northern lights' } %>
         </li>
         <li>
-          <div class="card">
-            <div class="card__thumb">
-              <a href="ideas/one-example-idea.html">
-                <img src="http://fpoimg.com/255x170"
-                     alt="Placeholder image for templating">
-              </a>
-              <div class="card__intro">
-                <h4 class="card__title">Something anything onething much longer text something</h4>
-                <span>109,598,324 are doing this</span>
-              </div>
-            </div>
-          </div>
-          <div class="card__footer">
-            <button class="card__btn card__like delta" data-like="something-anything-onething-much-longer-text-something">
-              <svg class="icon-heart" role="presentation">
-                <use xlink:href="images/icons-defs.svg#heart"></use>
-              </svg>
-              Like
-            </button>
-            <button class="card__btn card__add delta" data-addGoal="something-anything-onething-much-longer-text-something">
-              <svg class="icon-pluss" role="presentation">
-                <use xlink:href="images/icons-defs.svg#pluss"></use>
-              </svg>
-              Add Goal
-            </button>
-          </div>
+          <%= render partial: 'idea_card', locals: { card_title: 'Something very long sentence to see the wrapping' } %>
         </li>
         <li>
-          <div class="card">
-            <div class="card__thumb">
-              <a href="ideas/one-example-idea.html">
-                <img src="http://fpoimg.com/255x170"
-                     alt="Placeholder image for templating">
-              </a>
-              <div class="card__intro">
-                <h4 class="card__title">Short</h4>
-                <span>1 is doing this</span>
-              </div>
-            </div>
-            <div class="card__footer">
-              <button class="card__btn card__like delta" data-like="see-the-northern-lights">
-                <svg class="icon-heart" role="presentation">
-                  <use xlink:href="assets/icons/icons-defs.svg#heart"></use>
-                </svg>
-                Like
-              </button>
-              <button class="card__btn card__add delta" data-addGoal="see-the-northern-lights">
-                <svg class="icon-pluss" role="presentation">
-                  <use xlink:href="assets/icons/icons-defs.svg#pluss"></use>
-                </svg>
-                Add Goal
-              </button>
-            </div>
-          </div>
-          <div class="card__footer">
-            <button class="card__btn card__like delta" data-like="see-the-northern-lights">
-              <svg class="icon-heart" role="presentation">
-                <use xlink:href="images/icons-defs.svg#heart"></use>
-              </svg>
-              Like
-            </button>
-            <button class="card__btn card__add delta" data-addGoal="see-the-northern-lights">
-              <svg class="icon-pluss" role="presentation">
-                <use xlink:href="images/icons-defs.svg#pluss"></use>
-              </svg>
-              Add Goal
-            </button>
-          </div>
+          <%= render partial: 'idea_card', locals: { card_title: 'Swimming with the Dolphins' } %>
         </li>
         <li>
-          <div class="card">
-            <div class="card__thumb">
-              <a href="ideas/one-example-idea.html">
-                <img src="http://fpoimg.com/255x170"
-                     alt="Placeholder image for templating">
-              </a>
-              <div class="card__intro">
-                <h4 class="card__title">Short</h4>
-                <span>1 has done this</span>
-              </div>
-            </div>
-            <div class="card__footer">
-              <button class="card__btn card__like delta" data-like="see-the-northern-lights">
-                <svg class="icon-heart" role="presentation">
-                  <use xlink:href="images/icons-defs.svg#heart"></use>
-                </svg>
-                Like
-              </button>
-              <button class="card__btn card__add delta" data-addGoal="see-the-northern-lights">
-                <svg class="icon-pluss" role="presentation">
-                  <use xlink:href="images/icons-defs.svg#pluss"></use>
-                </svg>
-                Add Goal
-              </button>
-            </div>
-          </div>
+          <%= render partial: 'idea_card', locals: { card_title: 'Climb the Everest Mountain' } %>
         </li>
       </ul>
     </div>
