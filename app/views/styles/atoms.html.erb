@@ -6,9 +6,9 @@
     </p>
     <nav>
       <ul class="sub-navigation">
-        <li><a href="atoms.html" class="current">Atoms</a></li>
+        <%= render(partial: 'sub_nav_item', locals: { title: 'Atoms', uri: '/styles/atoms' }) %>
         <%= render(partial: 'sub_nav_item', locals: { title: 'Molecules', uri: '/styles/molecules' }) %>
-        <li><%= link_to('Organisms', '/styles/organisms') %></li>
+        <%= render(partial: 'sub_nav_item', locals: { title: 'Organisms', uri: '/styles/organisms' }) %>
         <li><a href="templates.html">Templates</a></li>
         <li><a href="#pages">Pages</a></li>
       </ul>
