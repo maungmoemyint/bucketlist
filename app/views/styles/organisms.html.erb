@@ -55,18 +55,14 @@
     <h2>02. Ideas</h2>
     <div>
       <ul class="bare-list float-grid css-grid">
-        <li>
-          <%= render partial: 'idea_card', locals: { card_title: 'See the Northern lights' } %>
-        </li>
-        <li>
-          <%= render partial: 'idea_card', locals: { card_title: 'Something very long sentence to see the wrapping' } %>
-        </li>
-        <li>
-          <%= render partial: 'idea_card', locals: { card_title: 'Swimming with the Dolphins' } %>
-        </li>
-        <li>
-          <%= render partial: 'idea_card', locals: { card_title: 'Climb the Everest Mountain' } %>
-        </li>
+        <% ['See the Northern light',
+            'Driving to Norway',
+            'Swimming with Dolphins',
+            'Climb the Everest'].each do |item| %>
+          <li>
+            <%= render(partial: 'idea_card', locals: { card_title: item }) %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </section>
