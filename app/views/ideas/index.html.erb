@@ -12,9 +12,9 @@
           'Learn how to Ski',
           'Write a book about Geoinfomatics',
           'Intert-rail across Europe',
-          'Restore a Land Rover Defender 300 TDI'].each do |item| %>
+          'Restore a Land Rover Defender 300 TDI'].each do |title| %>
         <li>
-          <%= render(partial: 'idea_card', locals: { card_title: item }) %>
+          <%= render(partial: 'idea_card', locals: { card_title: title }) %>
         </li>
       <% end %>
 
