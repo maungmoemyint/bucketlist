@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>My Bucket List</title>
+    <meta name="description" content="My Bucket List, collect your life goals and get inspired by others'">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styleguide.css">
+  </head>
+  <body>
+    <!--
+      Start of header markup for layouts/application.html.erb
+      This goes before <%= yield %>
+    -->
+    <header>
+      <div class="site-header">
+        <div class="content-wrapper">
+          <div class="logo">
+            <a href="/"><span><i>My</i> Bucket List</span></a>
+          </div>
+          <form class="global-search" method="get" action="" role="search">
+            <div class="input-inline">
+              <label class="input-group__label sr-only" for="global-search-input">Looking for inspiration?</label>
+              <div class="input-row">
+                <input id="global-search-input" class="input-row__field" type="text" name="search" placeholder="e.g. Swimming with dolphins">
+                <button class="btn btn--inline btn--primary" type="submit">Search</button>
+              </div>
+            </div>
+          </form>
+          <nav class="site-header__nav">
+            <ul class="main-navigation">
+              <li><a href="#nolink">Inspiration</a></li>
+              <li><a href="#nolink">Sign Up</a></li>
+              <li><a href="#nolink">Log In</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!--
+      End of header markup
+    -->
+
+    <!--
+      Start of home/index.html.erb view content
+    -->
+    <main>
+      <div class="masthead">
+        <div class="content-wrapper">
+          <h1>Get inspired. Create your bucket list. Share.</h1>
+          <form method="get" action=" ">
+            <div class="input-inline">
+              <label class="input-group__label" for="banner-search-input">Inspire me</label>
+              <div class="input-row">
+                <input id="banner-search-input" class="input-row__field" type="text" name="search" placeholder="e.g. Swimming with dolphins">
+                <button class="btn btn--inline" type="submit">Search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="content-wrapper">
+        <h2>Some ideas</h2>
+        <ul class="bare-list float-grid css-grid">
+          <li class="card">
+              <div class="card__thumb">
+                <a href="ideas/northern-lights.html">
+                  <img src="http://fpoimg.com/255x170" alt="Northern lights over mountain covered in snow">
+                </a>
+                <div class="card__intro">
+                  <h4 class="card__title">See the Northern lights</h4>
+                  <span>1,598 have done this</span>
+                </div>
+              </div>
+              <div class="card__footer">
+                <button class="card__btn card__like delta" data-like="see-the-northern-lights">
+                  <svg class="icon-heart" role="presentation">
+                    <use href="/images/icons/icons-defs.svg#heart"></use>
+                  </svg>
+                  Like
+                </button>
+                <button class="card__btn card__add delta" data-addGoal="see-the-northern-lights">
+                  <svg class="icon-pluss" role="presentation">
+                    <use href="/images/icons/icons-defs.svg#pluss"></use>
+                  </svg>
+                  Add Goal
+                </button>
+              </div>
+          </li>
+          <li class="card">
+            <div class="card__thumb">
+              <a href="ideas/one-example-idea.html">
+                <img src="http://fpoimg.com/255x170" alt="Placeholder image for templating">
+              </a>
+              <div class="card__intro">
+                <h4 class="card__title">Something anything onething much longer text something</h4>
+                <span>109,598,324 have done this</span>
+              </div>
+            </div>
+            <div class="card__footer">
+              <button class="card__btn card__like delta" data-like="something-anything-onething-much-longer-text-something">
+                <svg class="icon-heart" role="presentation">
+                  <use href="/images/icons/icons-defs.svg#heart"></use>
+                </svg>
+                Like
+              </button>
+              <button class="card__btn card__add delta" data-addGoal="something-anything-onething-much-longer-text-something">
+                <svg class="icon-pluss" role="presentation">
+                  <use href="/images/icons/icons-defs.svg#pluss"></use>
+                </svg>
+                Add Goal
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__thumb">
+              <a href="ideas/one-example-idea.html">
+                <img src="http://fpoimg.com/255x170" alt="Placeholder image for templating">
+              </a>
+              <div class="card__intro">
+                <h4 class="card__title">Short</h4>
+                <span>1 has done this</span>
+              </div>
+            </div>
+            <div class="card__footer">
+              <button class="card__btn card__like delta" data-like="see-the-northern-lights">
+                <svg class="icon-heart" role="presentation">
+                  <use href="/images/icons/icons-defs.svg#heart"></use>
+                </svg>
+                Like
+              </button>
+              <button class="card__btn card__add delta" data-addGoal="see-the-northern-lights">
+                <svg class="icon-pluss" role="presentation">
+                  <use href="/images/icons/icons-defs.svg#pluss"></use>
+                </svg>
+                Add Goal
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="see-more">
+        <button class="btn" type="button" data-more="true">See more</button>
+      </div>
+    </main>
+    <!--
+      End of home/index.html.erb view content
+    -->
+
+    <!--
+      Start of footer markup for layouts/application.html.erb
+      This goes after <%= yield %>
+    -->
+    <footer class="site-footer">
+      <div class="content-wrapper">
+        <div class="logo logo--inverted footer__logo">
+          <a href="/"><span><i>My</i> Bucket List</span></a>
+        </div>
+        <nav class="footer__navigation">
+          <ul>
+            <li><a href="#nolink">About</a></li>
+            <li><a href="#nolink">Style Guide</a></li>
+            <li><a href="#nolink">Terms of Use</a></li>
+          </ul>
+        </nav>
+        <p class="copyright">&copy; EPFL 2017</p>
+      </div>
+    </footer>
+    <!--
+      End of footer markup
+    -->
+  </body>
+</html>
