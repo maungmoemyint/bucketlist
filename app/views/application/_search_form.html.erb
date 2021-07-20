@@ -1,0 +1,10 @@
+<%= form_tag(ideas_index_path, class: 'global-search', method: 'GET') do %>
+  <div class="input-inline">
+    <label class="input-group__label sr-only" for="q">Looking for inspiration?</label>
+    <div class="input-row">
+      <%= text_field_tag('q', nil, class: 'input-row__field', placeholder: 'e.g. Swimming with dolphins') %>
+
+      <%= button_tag('Search', class: 'btn btn--inline btn--primary')  %>
+    </div>
+  </div>
+<% end %>

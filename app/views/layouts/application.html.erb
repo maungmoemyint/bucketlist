@@ -12,10 +12,6 @@
 
   <body>
 
-    <!--
-      Start of header markup for layouts/application.html.erb
-      This goes before <%= yield %>
-    -->
     <header class="sg-header">
       <div class="site-header">
         <div class="content-wrapper">
@@ -26,15 +22,9 @@
 
 
           </div>
-          <form class="global-search" method="get" action="" role="search">
-            <div class="input-inline">
-              <label class="input-group__label sr-only" for="global-search-input">Looking for inspiration?</label>
-              <div class="input-row">
-                <input id="global-search-input" class="input-row__field" type="text" name="search" placeholder="e.g. Swimming with dolphins">
-                <button class="btn btn--inline btn--primary" type="submit">Search</button>
-              </div>
-            </div>
-          </form>
+
+          <%= render(partial: 'search_form')  %>
+
           <nav class="site-header__nav">
             <ul class="main-navigation">
               <li><a href="#nolink">Inspiration</a></li>
