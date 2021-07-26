@@ -4,17 +4,10 @@
   </div>
   <div class="content-wrapper">
     <ul class="bare-list float-grid css-grid">
-      <% ['See the Northern light',
-          'Driving to Norway',
-          'Swimming with Dolphins',
-          'Own a 1960s Classic convertible Mercedes ',
-          'Study Mechanical Engineering after retirement',
-          'Learn how to Ski',
-          'Write a book about Geoinfomatics',
-          'Intert-rail across Europe',
-          'Restore a Land Rover Defender 300 TDI'].each do |title| %>
+
+      <% @ideas.each do |idea| %>
         <li>
-          <%= render(partial: 'idea_card', locals: { card_title: title }) %>
+          <%= render(partial: 'idea_card', locals: { card_title: idea.title }) %>
         </li>
       <% end %>
 
