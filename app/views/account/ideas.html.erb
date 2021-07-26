@@ -1,0 +1,20 @@
+<main>
+  <div class="content-wrapper">
+    <div class="page-header">
+      <h1>My Idea</h1>
+      <%= link_to('Create Idea', ideas_new_path, class: 'btn') %>
+    </div>
+  </div>
+  <div class="content-wrapper">
+    <ul class="bare-list float-grid css-grid">
+      <% @ideas.each do |idea| %>
+        <li>
+            <%= render(partial: 'editable_idea_card', locals: {title: idea.title }) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="see-more">
+    <button class="btn" type="button" data-more="true">See more</button>
+  </div>
+</main>
