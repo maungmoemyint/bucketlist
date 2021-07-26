@@ -4,11 +4,15 @@
     <%= form_tag(ideas_create_path, class: 'form--inpage') do %>
       <div class="input-group input-group--horizontal">
         <label class="input-group__label" for="title">Title</label>
-        <input id="title" class="input-group__field" type="text" name="title" placeholder="E.g. Ride a camel">
+
+        <%= text_field_tag('title', nil, placeholder:'E.g. Ride a camel', class: 'input-group__field' ) %>
+
       </div>
       <div class="prompt">
         <a class="prompt__cancel" href="#cancel">Cancel</a>
-        <button class="btn btn--primary prompt__confirm" type="submit">Create idea</button>
+
+        <%= button_tag('Create idea', class: 'btn btn--primary prompt__confirm') %>
+
       </div>
     <% end %>
   </div>
