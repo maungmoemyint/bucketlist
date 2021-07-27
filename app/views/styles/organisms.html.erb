@@ -60,7 +60,8 @@
             'Swimming with Dolphins',
             'Climb the Everest'].each do |item| %>
           <li>
-            <%= render(partial: 'idea_card', locals: { card_title: item }) %>
+            <%= render(partial: 'idea_card',
+                       locals: { card_title: item, done_count: 24, photo_url: 'http://fpoimg.com/255x170' }) %>
           </li>
         <% end %>
       </ul>
