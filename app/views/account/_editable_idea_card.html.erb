@@ -4,7 +4,7 @@
       <img src="http://fpoimg.com/255x170" alt="Northern lights over mountain covered in snow">
     </a>
     <div class="card__intro">
-      <h4 class="card__title"><%= title %></h4>
+      <h4 class="card__title"><%= idea.title %></h4>
       <span>75 have done this</span>
     </div>
   </div>
@@ -15,7 +15,7 @@
       </svg>
       Delete
     </button>
-    <a class="btn delta" href="#no-link">
+    <a class="btn delta" href="<%= edit_idea_path(idea) %>">
       <svg class="icon-edit" role="presentation">
         <use xlink:href="../icons/icons-defs.svg#edit"></use>
       </svg>

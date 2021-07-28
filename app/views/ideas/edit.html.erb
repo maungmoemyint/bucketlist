@@ -1,0 +1,28 @@
+<main>
+  <div class="content-wrapper">
+    <h1>Edit idea</h1>
+    <%= form_tag(idea_path(@idea), method: 'PATCH', class: 'form--inpage') do %>
+      <div class="input-group input-group--horizontal">
+        <label class="input-group__label" for="title">Title</label>
+        <%= text_field_tag('title', @idea.title, placeholder:'E.g. Ride a camel', class: 'input-group__field' ) %>
+      </div>
+
+      <div class="input-group input-group--horizontal">
+        <label class="input-group__label" for="done_count">Done count</label>
+        <%= text_field_tag('done_count', @idea.done_count, class: 'input-group__field') %>
+      </div>
+
+      <div class="input-group input-group--horizontal">
+        <label class="input-group__label" for="photo_url">Photo URL</label>
+        <%= text_field_tag('photo_url', @idea.photo_url, class: 'input-group__field') %>
+      </div>
+
+      <div class="prompt">
+        <a class="prompt__cancel" href="#cancel">Cancel</a>
+
+        <%= button_tag('Update', class: 'btn btn--primary prompt__confirm') %>
+
+      </div>
+    <% end %>
+  </div>
+</main>
