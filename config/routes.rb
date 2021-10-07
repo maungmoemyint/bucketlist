@@ -1,29 +1,42 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
-  get 'home/index'
+  scope '/:locale' do
+    root to: 'home#index'
 
-  get 'styles/atoms'
+    get 'home/index'
 
-  get 'styles/molecules'
+    get 'styles/atoms'
 
-  get 'styles/organisms'
+    get 'styles/molecules'
 
-  get 'ideas/index'
+    get 'styles/organisms'
 
-  get 'styleguide', to: 'styles#atoms'
+    get 'styleguide', to: 'styles#atoms'
 
-  get 'complete/style/guide', to: 'styles#atoms'
+    get 'complete/style/guide', to: 'styles#atoms'
 
-  get 'ideas/new'
+    resources :sessions, only: [:new, :create, :destroy]
 
-  post 'ideas/create'
+    resources :users, only: [:new, :create, :edit, :update] do
+      resources :goals
+    end
 
-  get '/ideas/:id/edit', to: 'ideas#edit', as: 'edit_idea'
 
-  patch '/ideas/:id', to: 'ideas#update', as: 'idea'
+    resources :ideas do
+      resources :comments
+      resources :photos
+    end
 
-  get 'account/ideas'
+    get 'account', to: 'account#edit'
+    patch 'account', to: 'account#update'
+    get 'account/ideas'
+    get 'account/goals'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+    get 'login', to: 'sessions#new'
+
+    get 'signup', to: 'users#new'
+
+    # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  end
 end

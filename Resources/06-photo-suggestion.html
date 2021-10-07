@@ -1,0 +1,29 @@
+<main>
+  <div class="content-wrapper">
+    <nav>
+      <ul class="sub-navigation">
+        <li><a href="#nolink">Idea</a></li>
+        <li><a href="#nolink" class="current">Photos</a></li>
+      </ul>
+    </nav>
+    <h1>Suggested</h1>
+    <div class="content-wrapper">
+      <ul class="bare-list float-grid css-grid">
+        <li>
+          <div class="card">
+            <div class="card__thumb">
+              <img src="http://fpoimg.com/255x170"></img>
+            </div>
+          </div>
+          <form method="POST" action="#">
+            <div class="prompt">
+              <input type="hidden" name="photo_url" value="http://fpoimg.com/255x170"></input>
+              <btn class="btn btn--primary prompt__confirm" type="submit">Use this photo</btn>
+            </div>
+          </form>
+          <p>Photo taken by Peter, available at <a href="https://unsplash.com">unsplash.com</a></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>

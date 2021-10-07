@@ -1,23 +1,23 @@
-<div class="card">
+<div class="card" id="idea-<%= idea.id %>">
   <div class="card__thumb">
-    <a href="ideas/northern-lights.html">
+    <%= link_to(idea_path(idea)) do %>
       <img src="http://fpoimg.com/255x170" alt="Northern lights over mountain covered in snow">
-    </a>
-    <div class="card__intro">
-      <h4 class="card__title"><%= idea.title %></h4>
-      <span>75 have done this</span>
-    </div>
+      <div class="card__intro">
+        <h4 class="card__title"><%= idea.title %></h4>
+        <span>75 have done this</span>
+      </div>
+    <% end %>
   </div>
   <div class="card__footer">
-    <button class="btn delta" type="submit">
+    <%= link_to(idea_path(idea), class: 'btn delta', method: :delete, remote: true) do %>
       <svg class="icon-delete" role="presentation">
-        <use href="../icons/icons-defs.svg#delete"></use>
+        <use href="<%= image_path('icons/icons-defs.svg') %>#delete"></use>
       </svg>
       Delete
-    </button>
+    <% end %>
     <a class="btn delta" href="<%= edit_idea_path(idea) %>">
       <svg class="icon-edit" role="presentation">
-        <use xlink:href="../icons/icons-defs.svg#edit"></use>
+        <use href=<%= image_path('icons/icons-defs.svg') %>#edit"></use>
       </svg>
       Edit
     </a>

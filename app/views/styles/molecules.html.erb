@@ -33,7 +33,7 @@
   <section class="sg-section" id="card">
     <h2>01. Card</h2>
     <%= render(partial: 'idea_card',
-               locals: {card_title: 'See the Northern lights', done_count: 24, photo_url: 'http://fpoimg.com/255x170' }) %>
+               locals: {card_title: 'See the Northern lights', done_count: 24, photo_url: 'http://fpoimg.com/255x170', idea: 1 }) %>
   </section>
   <section class="sg-section" id="logo">
     <h2>02. Logo</h2>
@@ -132,7 +132,8 @@
         <div>
           <button class="card__btn card__like delta" data-like="see-the-northern-lights">
             <svg class="icon-heart" role="presentation">
-              <use xlink:href="images/icons-defs.svg#heart"></use>
+              <!-- <use xlink:href="icons/icons-defs.svg#heart"></use> -->
+              <use xlink:href="<%= asset_url("icons/icons-defs.svg" + "#heart")%>"</use>
             </svg>
             Like
           </button>
@@ -144,7 +145,8 @@
         <div>
           <button class="card__btn card__like delta" data-like="see-the-northern-lights">
             <svg class="icon-heart icon-heart--liked" role="presentation">
-              <use xlink:href="images/icons-defs.svg#heart"></use>
+              <!-- <use xlink:href="icons/icons-defs.svg#heart"></use> -->
+              <use xlink:href="<%= asset_url("icons/icons-defs.svg" + "#heart")%>"</use>
             </svg>
             Liked
           </button>

@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card__thumb">
+    <%= link_to(idea_path(goal)) do %>
+      <%= render(partial: 'idea_photo', locals: { photo_url: goal.photo_url }) %>
+      <div class="card__intro">
+        <h4 class="card__title"><%= goal.title %></h4>
+        <span><%= goal.done_count %> have done this</span>
+      </div>
+    <% end %>
+
+  </div>
+  <div class="card__footer">
+    <button class="btn delta" type="submit">
+      <svg class="icon-delete" role="presentation">
+        <use href="<%= image_path('icons/icons-defs.svg') %>#delete"></use>
+      </svg>
+      Remove
+    </button>
+    <% if(can_edit?(goal)) %>
+      <%= link_to(edit_idea_path(goal), class: 'btn delta') do %>
+        <svg class="icon-edit" role="presentation">
+          <use href=<%= image_path('icons/icons-defs.svg') %>#edit"></use>
+        </svg>
+        Edit
+      <% end %>
+    <% end %>
+  </div>
+</div>

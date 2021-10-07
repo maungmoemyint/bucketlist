@@ -1,13 +1,8 @@
 <div class="card">
   <div class="card__thumb">
-    <a href="ideas/one-example-idea.html">
-      <% if(photo_url.nil?) %>
-        <img src="http://fpoimg.com/255x170"
-         alt="Northern lights over mountain covered in snow">
-      <% else %>
-        <%= image_tag(photo_url) %>
-      <% end %>
-    </a>
+    <%= link_to(idea_path(idea)) do %>
+      <%= render(partial: 'idea_photo', locals: { photo_url: photo_url }) %>
+    <% end %>
     <div class="card__intro">
       <h4 class="card__title"><%= card_title %></h4>
       <span><%= done_count %> have done this </span>
@@ -16,15 +11,21 @@
   <div class="card__footer">
     <button class="card__btn card__like delta" data-like="see-the-northern-lights">
       <svg class="icon-heart icon-heart--liked" role="presentation">
-        <use xlink:href="images/icons-defs.svg#heart"></use>
+        <!-- <use xlink:href="images/icons-defs.svg#heart"></use> -->
+        <use href="<%= image_path('icons/icons-defs.svg') %>#heart"></use>
       </svg>
       Like
     </button>
-    <button class="card__btn card__add delta" data-addGoal="see-the-northern-lights">
-      <svg class="icon-pluss" role="presentation">
-        <use xlink:href="images/icons-defs.svg#pluss"></use>
-      </svg>
-      Add Goal
-    </button>
+    <% if(logged_in?) %>
+      <%= form_tag(user_goals_path(current_user), remote: true, id: "goal-#{idea.id}") do %>
+        <%= hidden_field_tag('idea_id', idea.id) %>
+        <%= button_tag(class: 'btn delta', type: 'submit') do %>
+          <svg class="icon-pluss icon--sm" role="presentation">
+            <use xlink:href="<%= asset_url("icons/icons-defs.svg" + "#pluss")%>"</use>
+          </svg>
+          Add Goal
+        <% end %>
+      <% end %>
+    <% end %>
   </div>
 </div>

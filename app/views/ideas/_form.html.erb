@@ -1,0 +1,33 @@
+<% if(idea.errors.any?) %>
+  <div class="alert alert--wide">
+    <%= idea.errors.full_messages.join('<br />') %>
+  </div>
+<% end %>
+<%= form_for(idea, html: { class: 'form--inpage' }) do |form| %>
+  <div class="input-group input-group--horizontal">
+    <%= form.label(:title, class: 'input-group__label') %>
+    <%= form.text_field(:title, placeholder:'E.g. Ride a camel', class: 'input-group__field' ) %>
+  </div>
+
+  <div class="input-group input-group--horizontal">
+    <%= form.label(:done_count, class: 'input-group__label') %>
+    <%= form.text_field(:done_count, class: 'input-group__field') %>
+  </div>
+
+  <div class="input-group input-group--horizontal">
+    <%= form.label(:photo_url, class: 'input-group__label') %>
+    <%= form.text_field(:photo_url, class: 'input-group__field') %>
+  </div>
+
+  <div class="input-group input-group--horizontal">
+    <%= form.label(:description, class: 'input-group__label') %>
+    <%= form.text_area(:description, class: 'input-group__field') %>
+  </div>
+
+  <div class="prompt">
+    <a class="prompt__cancel" href="#cancel">Cancel</a>
+
+    <%= form.submit(class: 'btn btn--primary prompt__confirm') %>
+
+  </div>
+<% end %>

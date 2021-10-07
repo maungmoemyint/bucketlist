@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
 
     <!-- <link rel="stylesheet" href="/css/main.css"></link> -->
     <!-- <link rel="stylesheet" href="css/styleguide.css"></link> -->
@@ -16,22 +17,15 @@
       <div class="site-header">
         <div class="content-wrapper">
           <div class="logo">
-
-
             <%= link_to('<span><i>My</i> Bucket List</span>'.html_safe, root_path) %>
-
-
           </div>
 
           <%= render(partial: 'search_form')  %>
-
-          <nav class="site-header__nav">
-            <ul class="main-navigation">
-              <li><a href="#nolink">Inspiration</a></li>
-              <li><%= link_to('Account', account_ideas_path) %></li>
-              <li><a href="#nolink">Log In</a></li>
-            </ul>
-          </nav>
+          <% if(logged_in?) %>
+            <%= render(partial: 'authenticated_user_header') %>
+          <% else %>
+            <%= render(partial: 'anonymous_user_header') %>
+          <% end %>
         </div>
       </div>
     </header>
@@ -50,7 +44,13 @@
             <li><a href="#nolink">Terms of Use</a></li>
           </ul>
         </nav>
-        <p class="copyright">&copy; EPFL 2017</p>
+    
+        <div>
+          <% I18n.available_locales.each do |locale| %>
+            <%= link_to locale, url_for(locale: locale) %>
+          <% end %>
+          <p class="copyright">&copy; EPFL 2017</p>
+        </div>
       </div>
     </footer>
 

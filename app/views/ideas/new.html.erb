@@ -1,28 +1,6 @@
 <main>
   <div class="content-wrapper">
     <h1>Create new idea</h1>
-    <%= form_tag(ideas_create_path, class: 'form--inpage') do %>
-      <div class="input-group input-group--horizontal">
-        <label class="input-group__label" for="title">Title</label>
-        <%= text_field_tag('title', nil, placeholder:'E.g. Ride a camel', class: 'input-group__field' ) %>
-      </div>
-
-      <div class="input-group input-group--horizontal">
-        <label class="input-group__label" for="done_count">Done count</label>
-        <%= text_field_tag('done_count', nil, class: 'input-group__field') %>
-      </div>
-
-      <div class="input-group input-group--horizontal">
-        <label class="input-group__label" for="photo_url">Photo URL</label>
-        <%= text_field_tag('photo_url', nil, class: 'input-group__field') %>
-      </div>
-
-      <div class="prompt">
-        <a class="prompt__cancel" href="#cancel">Cancel</a>
-
-        <%= button_tag('Create idea', class: 'btn btn--primary prompt__confirm') %>
-
-      </div>
-    <% end %>
+    <%= render(partial: 'form', locals: { idea: @idea }) %>
   </div>
 </main>

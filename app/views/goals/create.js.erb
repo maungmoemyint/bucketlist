@@ -1,0 +1,17 @@
+var svgUse = document.createElementNS("http://www.w3.org/2000/svg", 'use');
+svgUse.setAttribute('href', '<%= image_path("icons/icons-defs.svg") %>#delete');
+
+var svgHeart = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+svgHeart.setAttribute('class', 'icon-delete');
+svgHeart.setAttribute('role', 'presentation');
+svgHeart.appendChild(svgUse);
+
+var buttonText = document.createTextNode('Remove Goal');
+
+var removeGoalLink = document.createElement('a');
+removeGoalLink.className = 'card__btn delta';
+removeGoalLink.appendChild(svgHeart);
+removeGoalLink.appendChild(buttonText);
+
+var addGoalLink = document.getElementById('goal-<%= @idea.id %>');
+addGoalLink.parentNode.replaceChild(removeGoalLink, addGoalLink);

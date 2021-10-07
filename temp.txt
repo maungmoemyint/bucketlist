@@ -1,0 +1,25 @@
+ideas_index_path  >> ideas_path
+  ideas_new_path  >> new_idea_path
+ideas_create_path >> ideas_path
+  edit_idea_path >> edit_idea_path
+       idea_path >> idea_path
+  show_idea_path >> idea_path
+
+
+
+  ideas GET    /ideas(.:format)                ideas#index
+      POST   /ideas(.:format)                ideas#create
+new_idea GET    /ideas/new(.:format)            ideas#new
+edit_idea GET    /ideas/:id/edit(.:format)       ideas#edit
+ idea GET    /ideas/:id(.:format)            ideas#show
+      PATCH  /ideas/:id(.:format)            ideas#update
+      PUT    /ideas/:id(.:format)            ideas#update
+      DELETE /ideas/:id(.:format)            ideas#destroy
+
+
+ideas_path for ideas#index
+ideas_path for ideas#create
+new_idea_path for ideas#new
+edit_idea_path for ideas#edit
+idea_path for ideas#show
+idea_path for ideas#update

@@ -4,7 +4,7 @@ Capybara.run_server = false
 
 class CapybaraTest < ApplicationSystemTestCase
   test 'capybara works' do
-    visit('http://www.google.com')
+    visit('https://duckduckgo.com/)
     sleep(5.seconds)
     fill_in('q', with: 'Ruby on Rails')
     sleep(5.seconds)

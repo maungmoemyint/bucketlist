@@ -1,0 +1,7 @@
+<use href="../icons/icons-defs.svg#delete"></use>
+<use xlink:href="images/icons/icons-defs.svg#delete"></use>
+
+
+
+<!-- <use xlink:href="../icons/icons-defs.svg#edit"></use> -->
+<use xlink:href="images/icons/icons-defs.svg#edit"></use>

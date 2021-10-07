@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BucketList</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+
+    <!-- <link rel="stylesheet" href="/css/main.css"></link> -->
+    <!-- <link rel="stylesheet" href="css/styleguide.css"></link> -->
+  </head>
+
+  <body>
+
+    <header class="sg-header">
+      <div class="site-header">
+        <div class="content-wrapper">
+          <div class="logo">
+            <%= link_to('<span><i>My</i> Bucket List</span>'.html_safe, root_path) %>
+          </div>
+
+          <%= render(partial: 'search_form')  %>
+          <% if(logged_in?) %>
+            <%= render(partial: 'authenticated_user_header') %>
+          <% else %>
+            <%= render(partial: 'anonymous_user_header') %>
+          <% end %>
+        </div>
+      </div>
+    </header>
+
+    <%= yield %>
+
+    <footer class="site-footer">
+      <div class="content-wrapper">
+        <div class="logo logo--inverted footer__logo">
+          <%= link_to('<span><i>My</i> Bucket List</span>'.html_safe, root_path) %>
+        </div>
+        <nav class="footer__navigation">
+          <ul>
+            <li><a href="#nolink">About</a></li>
+            <li><%= link_to('Style Guide', styles_atoms_path) %></li>
+            <li><a href="#nolink">Terms of Use</a></li>
+          </ul>
+        </nav>
+        <p class="copyright">&copy; EPFL 2017</p>
+      </div>
+    </footer>
+
+
+
+  </body>
+</html>

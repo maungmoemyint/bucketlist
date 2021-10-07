@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card__thumb">
+    <%= link_to(idea_path(idea)) do %>
+      <%= render(partial: 'idea_photo', locals: { photo_url: photo_url }) %>
+    <% end %>
+    <div class="card__intro">
+      <h4 class="card__title"><%= card_title %></h4>
+      <span><%= done_count %> have done this </span>
+    </div>
+  </div>
+  <div class="card__footer">
+    <button class="card__btn card__like delta" data-like="see-the-northern-lights">
+      <svg class="icon-heart icon-heart--liked" role="presentation">
+        <!-- <use xlink:href="images/icons-defs.svg#heart"></use> -->
+        <use href=<%= image_path('icons/icons-defs.svg') %>#heart"></use>
+      </svg>
+      Like
+    </button>
+    <button class="card__btn card__add delta" data-addGoal="see-the-northern-lights">
+      <svg class="icon-pluss" role="presentation">
+        <!-- <use xlink:href="images/icons-defs.svg#pluss"></use> -->
+        <use href=<%= image_path('icons/icons-defs.svg') %>#plus"></use>
+      </svg>
+      Add Goal
+    </button>
+  </div>
+</div>

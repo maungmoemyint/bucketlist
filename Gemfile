@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.6.0'
+
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -9,7 +11,8 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.7'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# sqlite3 below is commented out when changing to production mode
+# gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -39,6 +42,12 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
+  # Use sqlite3 as the database for Active Record, included in development mode
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
 end
 
 group :development do
@@ -53,3 +62,11 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'bcrypt'
+
+gem 'kaminari'
+
+gem 'unsplash'
+
+gem 'carrierwave', '~> 1.1.0'
