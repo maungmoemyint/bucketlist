@@ -70,3 +70,5 @@ gem 'kaminari'
 gem 'unsplash'
 
 gem 'carrierwave', '~> 1.1.0'
+
+gem 'figaro'
